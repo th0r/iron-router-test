@@ -1,0 +1,55 @@
+<template name="navigation">
+    <p>
+        Navigation
+    </p>
+    <ul>
+        <li><a href="{{ pathFor 'RouterDefaults' }}">Router defaults</a></li>
+        <li><a href="{{ pathFor 'routeOverrides' }}">route's overrides</a></li>
+        <li><a href="{{ pathFor 'controllerOverrides' }}">controller's overrides</a></li>
+    </ul>
+</template>
+
+<template name="RouterLayout">
+    {{> navigation }}
+    <div>Layout: Router</div>
+    <div>Content: {{ yield }}</div>
+    <div>Sidebar: {{ yield 'sidebar' }}</div>
+</template>
+
+<template name="RouterContent">
+    Router Content
+</template>
+
+<template name="RouterSidebar">
+    Router Sidebar
+</template>
+
+<template name="routeLayout">
+    {{> navigation }}
+    <div>Layout: route</div>
+    <div>Content: {{ yield }}</div>
+    <div>Sidebar: {{ yield 'sidebar' }}</div>
+</template>
+
+<template name="routeContent">
+    route Content
+</template>
+
+<template name="routeSidebar">
+    route Sidebar
+</template>
+
+<template name="SomeControllerLayout">
+    {{> navigation }}
+    <div>Layout: SomeController</div>
+    <div>Content: {{ yield }}</div>
+    <div>Sidebar: {{ yield 'sidebar' }}</div>
+</template>
+
+<template name="SomeControllerContent">
+    SomeController Content
+</template>
+
+<template name="SomeControllerSidebar">
+    SomeController Sidebar
+</template>
