@@ -10,7 +10,7 @@ Router.configure({
     action: function () {
         console.log("Router's action called");
         console.dir(this);
-        this.run();
+        this.render();
     }
 
 });
@@ -42,7 +42,7 @@ Router.map(function () {
         action: function () {
             console.log("route's action called");
             console.dir(this);
-            this.run();
+            this.render();
         }
     });
 
@@ -60,7 +60,7 @@ Router.map(function () {
         action: function () {
             console.log("route's action called");
             console.dir(this);
-            this.run();
+            this.render();
         }
     });
 
@@ -77,6 +77,6 @@ SomeController = RouteController.extend({
     action: function () {
         console.log("controller's action called");
         console.dir(this);
-        this.run();
+        this.render();
     }
 });
